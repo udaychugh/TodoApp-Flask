@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+   
+    <title> {% block title %} {% endblock title %} - MyTodo</title>
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAaVBMVEX///8DAQQAAACSkZKWlZZDQ0S8u7y/v8AbGhz4+Pienp4/Pj+3t7d6eXo4Nzju7u7Z2NlgX2AgHyDOzs7k5OSBgIEXFhirq6ssLC0xMDFJSEkkIyXz8/MQDhGMjIxzc3RoZ2ijoqPHx8e9fAQnAAAD/klEQVR4nO3d6VajQBCG4VCCWZ1kNJDFbHr/FzksSehAAa02Ul3zvb/iwgnPAVSgG0cjrnUYJRT4FCVRuGYtXNOY0oZe5y+WrXI8tQRG3vGKiCI74t5PXxbtbYAbf4EpcWMh3Hot3HUDV54ehEVEq07hwmdgSlx0CkPPhbNO4ZPnwhBCCKUHIYTy+46QZPdzIe3Gz3Ib76qr+w1h1LnIkEUQ1oNQWBAyQSgsCJkgFBaETBAKC0ImCIUFIROEwoKQCUJhQcgEobAgZIJQWBAyQSgsCJkgFBaETBAKq1fhpGMciFNJU70K/7SOLaKJU0lTEDJBWPb/CouxZoqFRElm1CskehudUuJNOHM1CHEpRJgBRylRrbAAZrPDSiG3pb+cFOENuJzoEZI5SvcOfDf3Ur+FdHyOqVyLEqhFmE8VO9Ej8PCab1wVQqJ8cnFBNI7BQI/wWLzKiA+7qBphQPGN+LiL6hEaxOsWvAHVCAN6KT4oZvvfdlFNwvtWrAAVCQ3iYWL+9tcjvBOXJlCV8Eo0d1FtwoBONeBdGOo4e6L47b263FX4NnMU/1CPXzt7ovpEQLVXMSB0HIRMEJZt23+6B04lTfUqPL3ErTmVNIU7pEwQCgtCJgiFBSEThMLqVXj+29rFJaSxXoW79r9Lj04lTeHcggnCMgidSpoaaEyUeQ+45wYZE3Va7437+OPzi5sOUoTZ9e9pRNqueRvf/pR/batnPE11PU7F1+aKhA+X82/As6IRQ3Qx7/uWQC1Cyp4Qfn+T6zE4upi/LXwXZo9AP+yvu6uxBbUIKclfHOb5/vpkApUIAxrnr6bZADBzF1UkpOeCGFWBWoTpGxdbcflRfO5c3ttXIkzf+dP4VAnUI7xvxayLsaweoUE8m4sqEt6JD0BVwuuxeHlcUNd8i2wrXqrLXYWb3dxNA4+JomN1Z1R3FaN2tKkT1oLQURAyfW1GSUuJU0lTvQqjyWtLE4v/nuUg3CFlglBYEDJBKCwImSAUFoRM9sJN+yyeD6eSpoYcE6XgOVFz9WdPEDqVNAUhE4RldsLVwlEDzCG1E/o8JspO6POdGQghhBBCCCGEEEIIIYQQwt8T6j8/HE0dxa+EBGG/QcgEYRmETiVNDfmcKAX3ntar9pxKmsI9YCYIhQUhE4TCgpAJQmFByAShsCBkglBYEDJBKCwImSAUFoRMEAoLQiYIhQUhE4TCgpAJQmFByAShsFwId59juX3ufi4MXI0t7Knq2n5D6FcQQig/CCGUn4Uw9Fw46xQuPBcuOoWr2p8JPkVkMax167XQ5mmNG6+FGwvhaO8vkfY2wOzfAPhpJIoa5g7ViDFzWiK9bJVjS2DaOowSv4iUROGatfwDQdebL5XBHAsAAAAASUVORK5CYII=">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">MyTodo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('about')}}">About</a>
+                    </li>
+                     
+                    
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-dark" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+{% block body %}
+    
+{% endblock body %}
+</body>
+
+</html>
