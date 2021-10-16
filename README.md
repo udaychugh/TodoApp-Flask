@@ -1,5 +1,7 @@
 # TodoApp-Flask
 
+A simple Todo app using Flask and SQLite Database
+
 ## Setup & Installtion
 
 Make sure you have the latest version of [Python](https://www.python.org/downloads/) installed.
@@ -15,7 +17,7 @@ pip install -r requirements.txt
 ## Running The App
 
 ```bash
-python main.py
+python app.py
 ```
 
 ## Viewing The App
